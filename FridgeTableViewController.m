@@ -39,13 +39,11 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 5;
 }
@@ -59,14 +57,14 @@
     return cell;
 }
 
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    UIImage *footerImage = [UIImage imageNamed:@"gradient.png"];
-    UIImageView *imageView = [[UIImageView alloc]initWithImage:footerImage];
-    imageView.frame = CGRectMake(10, 10, 1, 30);
-    return imageView;
-    
-    return self.ingredientsFooter;
-}
+////-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+////    UIImage *footerImage = [UIImage imageNamed:@"gradient.png"];
+////    UIImageView *imageView = [[UIImageView alloc]initWithImage:footerImage];
+////    imageView.frame = CGRectMake(10, 10, 1, 30);
+////    return imageView;
+////    
+////    return self.ingredientsFooter;
+//}
 
 
 

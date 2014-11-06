@@ -45,9 +45,16 @@
     return self.courseList.count;
 }
 
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return [self.courseList.courseList objectAtIndex:row];
+-(NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    NSString * currentString = [self.courseList.courseList objectAtIndex:row];
+    NSAttributedString *attString = [[NSAttributedString alloc] initWithString:currentString attributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:0.45 green:0.78 blue:0.66 alpha:1]}];
+    return attString;
 }
+
+//-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+//    return [self.courseList.courseList objectAtIndex:row];
+//}
+
 
 //- (IBAction)addIngredientButtonPressed:(id)sender {
 //    [self.pickedIngredients addObject:[self.ingredientList.ingredientList objectAtIndex:[self.IngredientPicker selectedRowInComponent:0]]];

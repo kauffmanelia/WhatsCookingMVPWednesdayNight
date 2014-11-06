@@ -17,9 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.74 green:0.33 blue:0.19 alpha:1]];
+[[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.45 green:0.78 blue:0.66 alpha:0.5]];
     NSShadow *shadow = [[NSShadow alloc]init];
-    shadow.shadowColor = [UIColor colorWithRed:0.41 green:0.82 blue:0.9 alpha:0.5];
+    shadow.shadowColor = [UIColor colorWithRed:0.22 green:0.23 blue:0.27 alpha:0.5];
     shadow.shadowOffset = CGSizeMake(0, 1);
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.22 green:0.23 blue:0.27 alpha:0.5], NSForegroundColorAttributeName, shadow, NSShadowAttributeName, [UIFont fontWithName:@"MarkerFelt-Thin" size:21.0], NSFontAttributeName, nil]];
     

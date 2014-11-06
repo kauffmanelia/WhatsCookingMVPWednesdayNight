@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		96181A0C1A09AC6F00519A7F /* FridgeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96181A0B1A09AC6F00519A7F /* FridgeTableViewController.m */; };
-		96181A871A0AE45B00519A7F /* gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 96181A861A0AE45B00519A7F /* gradient.png */; };
 		96C8C6011A09A1C80090FBF9 /* FridgeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C8C6001A09A1C80090FBF9 /* FridgeTableViewCell.m */; };
 		96C8C6021A09A1C80090FBF9 /* FridgeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C8C6001A09A1C80090FBF9 /* FridgeTableViewCell.m */; };
 		96C8C6041A09A8120090FBF9 /* StoryboardTuesNight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C8C6031A09A8120090FBF9 /* StoryboardTuesNight.storyboard */; };
@@ -42,7 +41,6 @@
 /* Begin PBXFileReference section */
 		96181A0A1A09AC6F00519A7F /* FridgeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FridgeTableViewController.h; path = ../FridgeTableViewController.h; sourceTree = "<group>"; };
 		96181A0B1A09AC6F00519A7F /* FridgeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FridgeTableViewController.m; path = ../FridgeTableViewController.m; sourceTree = "<group>"; };
-		96181A861A0AE45B00519A7F /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient.png; sourceTree = "<group>"; };
 		96C8C5FF1A09A1C80090FBF9 /* FridgeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FridgeTableViewCell.h; path = ../FridgeTableViewCell.h; sourceTree = "<group>"; };
 		96C8C6001A09A1C80090FBF9 /* FridgeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FridgeTableViewCell.m; path = ../FridgeTableViewCell.m; sourceTree = "<group>"; };
 		96C8C6031A09A8120090FBF9 /* StoryboardTuesNight.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StoryboardTuesNight.storyboard; path = ../StoryboardTuesNight.storyboard; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 				96CBD4591A08447600DE3EA0 /* ViewController.m */,
 				96CBD45E1A08447600DE3EA0 /* Images.xcassets */,
 				96CBD4601A08447600DE3EA0 /* LaunchScreen.xib */,
-				96181A861A0AE45B00519A7F /* gradient.png */,
 				96CBD4511A08447600DE3EA0 /* Supporting Files */,
 			);
 			path = MidtermStoryboard;
@@ -280,7 +277,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				96CBD4621A08447600DE3EA0 /* LaunchScreen.xib in Resources */,
-				96181A871A0AE45B00519A7F /* gradient.png in Resources */,
 				96C8C6041A09A8120090FBF9 /* StoryboardTuesNight.storyboard in Resources */,
 				96CBD45F1A08447600DE3EA0 /* Images.xcassets in Resources */,
 			);
