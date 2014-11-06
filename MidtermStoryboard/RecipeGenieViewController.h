@@ -8,15 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "CoursePickerViewController.h"
+#import "FridgeTableViewController.h"
 
 @class RecipeList;
 
-@interface RecipeGenieViewController : UIViewController <ParentViewControllerDelegate>
+@interface RecipeGenieViewController : UIViewController <ParentViewControllerDelegate, ReturnFromIngredientViewControllerDelegate>
 
-@property (nonatomic, strong) NSArray * selectedIngredients;
-@property (nonatomic, assign) enum Course course;
-@property (nonatomic, strong) NSArray * bannedIngredients;
-@property (nonatomic, strong) RecipeList * recipeList;
 @property (weak, nonatomic) IBOutlet UISwitch *TimeLimitSwitch;
+@property (nonatomic, assign) enum Course course;
+@property (nonatomic, strong) RecipeList * recipeList;
+@property (nonatomic, strong) NSArray * selectedIngredients;
+@property (nonatomic, strong) NSArray * excludedIngredients;
 
 @end

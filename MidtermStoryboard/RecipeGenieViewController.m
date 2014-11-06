@@ -36,13 +36,21 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if([segue.identifier isEqualToString:@"SearchRecipeSegue"]) {
-        URLForAPICall * url = [[URLForAPICall alloc] initWithSelectedIngredients:self.selectedIngredients andBannedIngredients:self.bannedIngredients andCourse:self.course andHas15MinuteLimit:self.TimeLimitSwitch.isOn];
+        URLForAPICall * url = [[URLForAPICall alloc] initWithSelectedIngredients:self.selectedIngredients andBannedIngredients:self.excludedIngredients andCourse:self.course andHas15MinuteLimit:self.TimeLimitSwitch.isOn];
         self.recipeList = [[RecipeList alloc] initDictionaryWithURL:url];
         RecipeCollectionViewController * destinationController = segue.destinationViewController;
         destinationController.recipeList = self.recipeList;
     } else if([segue.identifier isEqualToString:@"SelectCourseSegue"]){
         CoursePickerViewController * destinationController = segue.destinationViewController;
         destinationController.delegate = self;
+    } else if([segue.identifier isEqualToString:@"PickSelectedIngredientsSegue"]) {
+        FridgeTableViewController * destinationController = segue.destinationViewController;
+        destinationController.delegate = self;
+        destinationController.selectedOrExcluded = selected;
+    } else if([segue.identifier isEqualToString:@"PickExcludedIngredientsSegue"]) {
+        FridgeTableViewController * destinationController = segue.destinationViewController;
+        destinationController.delegate = self;
+        destinationController.selectedOrExcluded = excluded;
     }
 }
 

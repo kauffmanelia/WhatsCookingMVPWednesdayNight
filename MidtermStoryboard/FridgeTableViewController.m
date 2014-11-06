@@ -32,7 +32,6 @@
     self.tableView.tableFooterView =  self.ingredientsFooter;
     self.ingredientList = @[@"chicken", @"salmon", @"ham", @"lettuce", @"green peppers", @"shrimp"];
     self.pickedIngredients = [[NSMutableArray alloc]init];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,6 +43,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
@@ -64,27 +64,16 @@
     return cell;
 }
 
-////-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-////    UIImage *footerImage = [UIImage imageNamed:@"gradient.png"];
-////    UIImageView *imageView = [[UIImageView alloc]initWithImage:footerImage];
-////    imageView.frame = CGRectMake(10, 10, 1, 30);
-////    return imageView;
-////    
-////    return self.ingredientsFooter;
-//}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    FridgeTableViewCell * cell = [self.tableView cellForRowAtIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    Ingredient * newIngredient = [[Ingredient alloc]init];
-    newIngredient.name = cell.ingredientLabel.text;
-    [self.pickedIngredients addObject:newIngredient];
-    if(self.selectedOrExcluded == selected) {
-        [self.delegate setSelectedIngredients:self.pickedIngredients];
-    } else if(self.selectedOrExcluded == excluded) {
-        [self.delegate setExcludedIngredients:self.pickedIngredients];
-    }
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIImage *footerImage = [UIImage imageNamed:@"gradient.png"];
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:footerImage];
+    imageView.frame = CGRectMake(10, 10, 1, 30);
+    return imageView;
+    
+    return self.ingredientsFooter;
 }
+
+
 
 
 /*
@@ -121,14 +110,28 @@
 }
 */
 
-/*
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    FridgeTableViewCell * cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    Ingredient * newIngredient = [[Ingredient alloc]init];
+    newIngredient.name = cell.ingredientLabel.text;
+    [self.pickedIngredients addObject:newIngredient];
+    if(self.selectedOrExcluded == selected) {
+        [self.delegate setSelectedIngredients:self.pickedIngredients];
+    } else if(self.selectedOrExcluded == excluded) {
+        [self.delegate setExcludedIngredients:self.pickedIngredients];
+    }
+}
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
 }
-*/
+
 
 @end
